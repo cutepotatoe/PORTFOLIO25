@@ -1,0 +1,36 @@
+
+.fragment-mono-regular {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fragment-mono-regular-italic {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pp-neue-montreal-bold{ 
+    font-family: 'PP Neue Montreal';
+    font-weight: bold;
+    font-style: normal;
+}
+
+.pp-eiko-italic-light{ 
+    font-family: 'PP Eiko';
+    font-weight: 300;
+    font-style: italic;
+}
+
+.pp-eiko-black-italic{
+    font-family: 'PP Eiko';
+    font-weight: 900;
+    font-style: italic;
+}
+
+.pp-eiko-medium{ 
+    font-family: 'PP Eiko';
+    font-weight: 500;
+    font-style: normal;
+}
