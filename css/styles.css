@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
 
 .fragment-mono-regular {
   font-family: "Fragment Mono", monospace;
@@ -33,4 +39,27 @@
     font-family: 'PP Eiko';
     font-weight: 500;
     font-style: normal;
+}
+
+
+/* Loading video screen */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+.fullscreen {
+  height: 100vh;
+  background: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-content {
+  min-height: 200vh;
+  padding: 2rem;
+  background: #f0f0f0;
 }
