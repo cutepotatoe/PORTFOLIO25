@@ -4,6 +4,12 @@
     
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Loading types */
 .fragment-mono-regular {
   font-family: "Fragment Mono", monospace;
@@ -115,6 +121,45 @@ html, body {
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
+}
+
+/* ANIMACIONES LANDING PAGE */
+
+/* giro estrella esquina izq */
+.spin-star {
+    animation: rotate 8s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* volteo luna */
+.flip-wrapper {
+  perspective: 1000px; /* Necesario para efecto 3D */
+  display: inline-block;
+}
+
+.flip-spin {
+  display: block;
+  transform-style: preserve-3d;
+  animation: flipY 4s linear infinite;
+}
+
+@keyframes flipY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 /* flecha animacion landing page */

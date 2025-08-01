@@ -10,7 +10,7 @@ function onFirstScroll() {
   // Elimina la sección de carga después de moverse
   setTimeout(() => {
     loadingSection.remove();
-  }, 1000); // Espera 1s para asegurar que el scroll se complete
+  }, 2000); // Espera 1s para asegurar que el scroll se complete
 
   window.removeEventListener('scroll', onFirstScroll);
 }
