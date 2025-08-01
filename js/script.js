@@ -16,3 +16,15 @@ function onFirstScroll() {
 }
 
 window.addEventListener('scroll', onFirstScroll, { once: true });
+
+
+
+// delay para el video intro logo
+window.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('bg-video');
+
+  // Espera 2 segundos (2000 ms) y luego reproduce
+  setTimeout(() => {
+    video.play();
+  }, 1500);
+});
