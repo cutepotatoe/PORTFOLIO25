@@ -28,3 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
     video.play();
   }, 1500);
 });
+
+
+// SCRIPT PARA NAV BAR INTRO

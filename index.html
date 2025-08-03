@@ -57,19 +57,36 @@
 
     <!-- main web home -->
     <main>
+        <header id="navbar" class="navbar">
+            <div class="container d-flex justify-content-between align-items-center">
+                <img src="img/logo/AB big logo.svg" id="small-logo" alt="Small Logo">
+                <nav>
+                <ul class="nav-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                </nav>
+            </div>
+        </header>
+
         <section id="main-content">
             <div class="container-fluid d-flex flex-column min-vh-100 justify-content-end p-5">
                 <div class="row pb-5">
                     <div class="col">
-                        <h2>Hi! My name is</h2>
+                        <h2><span class="pink-highlight bounce-hover">Hi!</span> My name is</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <img src="img/logo/AB big logo.svg" alt="">
+                    <img src="img/logo/AB big logo.svg" id="big-logo" alt="Big Logo">
                 </div>
                 <div class="row pt-5 pb-5 mb-5">
-                    <div class="col d-flex justify-content-end">
-                        <h2>and I'm a graphic designer</h2>
+                    <div class="col d-flex flex-column align-items-end graphic-container">
+                        <h2>and I'm a <span class="graphic-hover">graphic designer</span>
+                            <svg class="graphic-underline" width="294" height="107" viewBox="0 0 294 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M98 30.9998C123 16.6665 190.7 -7.70017 261.5 9.49983C332.3 26.6998 252 69 214.5 81.5C177 94 49 116.4 17 92C-15 67.6 18 44.5 38.5 36C69.8333 23.6667 138.8 3.4 164 21" stroke="#D1D485" stroke-width="7" stroke-linecap="round"/>
+                            </svg>
+                        </h2>
                     </div>
                 </div>
             </div>

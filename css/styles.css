@@ -64,6 +64,11 @@ h2{
 }
 
 
+.pink-highlight {
+    color: #EB7EAA;
+}
+
+
 /* Loading video screen */
 body {
   margin: 0;
@@ -178,3 +183,60 @@ body::-webkit-scrollbar {
     transform: translateY(6px);
   }
 }
+
+/* ANIMACIONES PRE-HOME */
+
+/* saltitos de hi! */
+.bounce-hover {
+  display: inline-block;
+  transition: transform 0.4s ease-in-out;
+}
+
+.bounce-hover:hover {
+  animation: bounceY 0.8s ease-in-out infinite;
+}
+
+@keyframes bounceY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* circulo de designer */
+.graphic-container {
+  position: relative;
+  display: inline-block;
+}
+
+.graphic-hover {
+  position: relative;
+  z-index: 2;
+}
+
+.graphic-underline {
+  position: absolute;
+  bottom: -20px; /* Ajusta este valor visualmente */
+  right:0;
+  margin-right: -0.5em;
+  stroke: #D1D485;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.graphic-hover:hover ~ .graphic-underline {
+  animation: drawUnderline 1.2s ease-out forwards;
+}
+
+@keyframes drawUnderline {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
