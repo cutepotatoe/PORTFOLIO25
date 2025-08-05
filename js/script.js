@@ -31,3 +31,62 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 // SCRIPT PARA NAV BAR INTRO
+const transitionLogo = document.getElementById("transitionLogo");
+const navbarLogo = document.getElementById("navbarLogo");
+const mainHeader = document.getElementById("mainHeader");
+
+let isInNavState = false;
+
+function morphToNavbar() {
+    const bigRect = transitionLogo.getBoundingClientRect();
+    const smallRect = navbarLogo.getBoundingClientRect();
+
+    const scaleX = smallRect.width / bigRect.width;
+    const scaleY = smallRect.height / bigRect.height;
+    const translateX = smallRect.left - bigRect.left;
+    const translateY = smallRect.top - bigRect.top;
+
+    // Fix logo in place
+    transitionLogo.style.position = "fixed";
+    transitionLogo.style.top = `${bigRect.top}px`;
+    transitionLogo.style.left = `${bigRect.left}px`;
+    transitionLogo.style.width = `${bigRect.width}px`;
+    transitionLogo.style.height = `${bigRect.height}px`;
+    transitionLogo.style.zIndex = "1001";
+
+    requestAnimationFrame(() => {
+    transitionLogo.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scaleX}, ${scaleY})`;
+    });
+
+    mainHeader.classList.add("visible");
+    isInNavState = true;
+}
+
+function revertMorph() {
+    transitionLogo.style.transform = `translate(0px, 0px) scale(1)`;
+    mainHeader.classList.remove("visible");
+
+    setTimeout(() => {
+    transitionLogo.style.position = "relative";
+    transitionLogo.style.top = "";
+    transitionLogo.style.left = "";
+    transitionLogo.style.width = "";
+    transitionLogo.style.height = "";
+    transitionLogo.style.transform = "none";
+    }, 800);
+
+    isInNavState = false;
+}
+
+// Observe when hero leaves screen
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+    if (!entry.isIntersecting && !isInNavState) {
+        morphToNavbar();
+    } else if (entry.isIntersecting && isInNavState) {
+        revertMorph();
+    }
+    });
+}, { threshold: 0.1 });
+
+observer.observe(document.getElementById("hero"));

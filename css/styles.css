@@ -74,6 +74,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   scroll-behavior: smooth;
+  background-color: #f0f0f0;
 }
 
 .fullscreen {
@@ -86,7 +87,7 @@ body {
 }
 
 #main-content {
-  min-height: 200vh;
+  min-height: 100vh;
   padding: 2rem;
   background: #f0f0f0;
 }
@@ -113,7 +114,6 @@ body {
 #loading-section > .container-fluid {
   position: relative;
   z-index: 1;
-  /* color: white; Opcional: mejora contraste */
 }
 
 
@@ -240,3 +240,33 @@ body::-webkit-scrollbar {
   }
 }
 
+
+/* NAV BAR, ANIMACIÓN LOGOS ENTRADA A PAGE */
+
+header {
+    position: sticky;
+    top:0;
+    z-index: 999;
+}
+
+header.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+#navbarLogo {
+    width: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 1.5rem;
+    color: black;
+}

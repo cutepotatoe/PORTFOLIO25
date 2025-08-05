@@ -57,28 +57,27 @@
 
     <!-- main web home -->
     <main>
-        <header id="navbar" class="navbar">
-            <div class="container d-flex justify-content-between align-items-center">
-                <img src="img/logo/AB big logo.svg" id="small-logo" alt="Small Logo">
-                <nav>
-                <ul class="nav-links">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                </nav>
-            </div>
-        </header>
-
-        <section id="main-content">
+        <section id="main-content">  
             <div class="container-fluid d-flex flex-column min-vh-100 justify-content-end p-5">
                 <div class="row pb-5">
                     <div class="col">
                         <h2><span class="pink-highlight bounce-hover">Hi!</span> My name is</h2>
                     </div>
                 </div>
-                <div class="row">
-                    <img src="img/logo/AB big logo.svg" id="big-logo" alt="Big Logo">
+                <div class="row position-relative overflow-visible">
+                    <img src="img/logo/AB big logo.svg" class="w-100" style="display: block;">
+                    <header class="position-absolute start-0 end-0">
+                        <nav id="" class="navbar container-fluid d-flex justify-content-between position-absolute start-0 end-0" style="top: 0%;">
+                            <div class="d-flex align-items-center col-lg-3">
+                                <a href="index.html"><img src="img/logo/AB big logo.svg" alt=""></a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end col-lg-4 col-md-4 col-2 grid gap-4">
+                                <a href="about.html" class="text-decoration-none">Work</a>
+                                <a href="works.html" class="text-decoration-none">About</a>
+                                <a href="contact.html" class="text-decoration-none">Contact</a>                        
+                            </div>
+                        </nav>
+                    </header>
                 </div>
                 <div class="row pt-5 pb-5 mb-5">
                     <div class="col d-flex flex-column align-items-end graphic-container">
@@ -91,10 +90,16 @@
                 </div>
             </div>
         </section>
-
+        <section class="content">
+            <h2>Scroll down to see logo morph into navbar</h2>
+            <p>Then scroll back up to see it revert.</p>
+        </section>
+        <div>
+            <img src="img/landingpage/moon_white_landing.svg" class="w-100"> 
+        </div>        
     </main>
     <footer>
-
+        
     </footer>
 
 </body>
