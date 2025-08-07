@@ -1,21 +1,46 @@
+const loadingcont = document.getElementById('loadingcont');
+let hasTransitioned = false; // Para evitar múltiples llamadas
 
-// Al hacer scroll por primera vez, baja al contenido y elimina la sección de carga
-function onFirstScroll() {
-  const loadingSection = document.getElementById('loading-section');
+function transitionToIndex() {
+  if (hasTransitioned) return;
+  hasTransitioned = true;
 
-  // Scroll automático a la siguiente sección
-  const nextSection = document.getElementById('main-content');
-  nextSection.scrollIntoView({ behavior: 'smooth' });
+  loadingcont.classList.add('slide-up');
 
-  // Elimina la sección de carga después de moverse
   setTimeout(() => {
-    loadingSection.remove();
-  }, 2000); // Espera 1s para asegurar que el scroll se complete
-
-  window.removeEventListener('scroll', onFirstScroll);
+    window.location.href = "index.html";
+  }, 1000); // igual al CSS
 }
 
-window.addEventListener('scroll', onFirstScroll, { once: true });
+// Detectar scroll o swipe
+function handleScroll(e) {
+  // Para scroll de mouse
+  if (e.deltaY > 30) {
+    transitionToIndex();
+  }
+}
+
+// Para touch (móviles)
+let touchStartY = null;
+function handleTouchStart(e) {
+  touchStartY = e.touches[0].clientY;
+}
+
+function handleTouchMove(e) {
+  if (touchStartY === null) return;
+  const currentY = e.touches[0].clientY;
+  const diff = touchStartY - currentY;
+
+  if (diff > 30) {
+    transitionToIndex();
+  }
+}
+
+// Listeners
+window.addEventListener('wheel', handleScroll, { passive: true });
+window.addEventListener('touchstart', handleTouchStart, { passive: true });
+window.addEventListener('touchmove', handleTouchMove, { passive: true });
+
 
 
 
@@ -31,62 +56,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 // SCRIPT PARA NAV BAR INTRO
-const transitionLogo = document.getElementById("transitionLogo");
-const navbarLogo = document.getElementById("navbarLogo");
-const mainHeader = document.getElementById("mainHeader");
-
-let isInNavState = false;
-
-function morphToNavbar() {
-    const bigRect = transitionLogo.getBoundingClientRect();
-    const smallRect = navbarLogo.getBoundingClientRect();
-
-    const scaleX = smallRect.width / bigRect.width;
-    const scaleY = smallRect.height / bigRect.height;
-    const translateX = smallRect.left - bigRect.left;
-    const translateY = smallRect.top - bigRect.top;
-
-    // Fix logo in place
-    transitionLogo.style.position = "fixed";
-    transitionLogo.style.top = `${bigRect.top}px`;
-    transitionLogo.style.left = `${bigRect.left}px`;
-    transitionLogo.style.width = `${bigRect.width}px`;
-    transitionLogo.style.height = `${bigRect.height}px`;
-    transitionLogo.style.zIndex = "1001";
-
-    requestAnimationFrame(() => {
-    transitionLogo.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scaleX}, ${scaleY})`;
-    });
-
-    mainHeader.classList.add("visible");
-    isInNavState = true;
-}
-
-function revertMorph() {
-    transitionLogo.style.transform = `translate(0px, 0px) scale(1)`;
-    mainHeader.classList.remove("visible");
-
-    setTimeout(() => {
-    transitionLogo.style.position = "relative";
-    transitionLogo.style.top = "";
-    transitionLogo.style.left = "";
-    transitionLogo.style.width = "";
-    transitionLogo.style.height = "";
-    transitionLogo.style.transform = "none";
-    }, 800);
-
-    isInNavState = false;
-}
-
-// Observe when hero leaves screen
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-    if (!entry.isIntersecting && !isInNavState) {
-        morphToNavbar();
-    } else if (entry.isIntersecting && isInNavState) {
-        revertMorph();
-    }
-    });
-}, { threshold: 0.1 });
-
-observer.observe(document.getElementById("hero"));
+window.addEventListener('DOMContentLoaded', () => {
+  const main = document.getElementById('mainContent');
+  setTimeout(() => {
+    main.classList.add('visible');
+  }, 50); // pequeño delay para asegurar render previo a transición
+});
