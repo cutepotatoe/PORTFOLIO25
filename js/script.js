@@ -1,3 +1,5 @@
+
+// ANIMACIÓN INTRO TO INDEX
 const loadingcont = document.getElementById('loadingcont');
 let hasTransitioned = false; // Para evitar múltiples llamadas
 
