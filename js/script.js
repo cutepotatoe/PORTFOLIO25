@@ -51,9 +51,12 @@ window.addEventListener('DOMContentLoaded', () => {
   const video = document.getElementById('bg-video');
 
   // Espera 2 segundos (2000 ms) y luego reproduce
-  setTimeout(() => {
-    video.play();
-  }, 1500);
+  if (video) {  // solo corre si existe el video
+    setTimeout(() => {
+      video.play();
+    }, 1500);
+  }
+
 });
 
 

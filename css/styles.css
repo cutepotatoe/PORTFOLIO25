@@ -69,7 +69,7 @@ h2{
 }
 
 
-/* Loading video screen */
+/* INTRO PAGE */
 body {
   margin: 0;
   font-family: sans-serif;
@@ -115,39 +115,15 @@ body {
   z-index: 0;
 }
 
-
-#loading-section > .container-fluid {
-  position: relative;
-  z-index: 1;
-}
-
 #scroll{
   z-index: 3;
 }
 
 /* transición de salida */
-#introLoadingcont.slide-up {
+#loadingcont.slide-up {
   transform: translateY(-100%);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.9s ease-in-out;
 }
-
-.scroll-indicator {
-  
-  /* bottom: 20px; */
-  font-size: 1.5rem;
-  animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-}
-
-
 
 
 /* Ocultar la barra de scroll */
