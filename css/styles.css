@@ -90,7 +90,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   scroll-behavior: smooth;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .fullscreen {
@@ -279,22 +279,30 @@ body::-webkit-scrollbar {
   
 } */
 
-/* .page-content {
-  transform: translateY(100%);
-  opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+ .page-content {
+  position: static; 
+  transform: none;
+  filter: none;
+  z-index: auto;
+ 
 }
 
-.page-content.visible {
+/* .page-content.visible {
   transform: translateY(0);
   opacity: 1;
 } */
 
 /* OPCIONES NAVEGADOR */
+body {
+  margin: 0;
+   /* para que los blend modes se apliquen */
+  background: transparent; /* deja transparente */
+}
+
 
 #index {
-  background-color: white;
-  isolation: isolate;
+  background: transparent;
+  
 }
 
 
@@ -321,9 +329,9 @@ body::-webkit-scrollbar {
   padding-right: 2.5em;
 }
 
-/* Transiciones SIEMPRE activas */
 
 #navFloating {
+  background: transparent;
   position: fixed;      /* flota sobre todo */
   top: 0;
   left: 0;
@@ -343,3 +351,14 @@ body::-webkit-scrollbar {
   /* por si el navegador necesita color inicial */
 }
 
+
+#pruebacosa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+#pruebacosa h1 {
+  color: white;
+  mix-blend-mode: difference;
+}
