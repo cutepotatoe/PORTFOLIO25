@@ -199,7 +199,7 @@ body {
 
 #maincont {
   padding: 2rem;
-  background: #ffffff;
+  background:#222;
 }
 
 /* Ocultar la barra de scroll */
@@ -269,17 +269,17 @@ body::-webkit-scrollbar {
 
 
 /* NAV BAR, ANIMACIÓN LOGOS ENTRADA A PAGE */
-main nav {
+/* main nav {
   position: sticky;
   top:80px;
-  /* border:5px solid #1B75CE; */
+  border:5px solid #1B75CE;
   display:inline-block;
   background: transparent;
   z-index: 10;
   
-}
+} */
 
-.page-content {
+/* .page-content {
   transform: translateY(100%);
   opacity: 0;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
@@ -288,9 +288,17 @@ main nav {
 .page-content.visible {
   transform: translateY(0);
   opacity: 1;
-}
+} */
 
 /* OPCIONES NAVEGADOR */
+
+#index {
+  background-color: white;
+  isolation: isolate;
+}
+
+
+
 
 #navLinks a {
   font-family: "Fragment Mono", monospace;
@@ -314,81 +322,24 @@ main nav {
 }
 
 /* Transiciones SIEMPRE activas */
-#mainNav {
-  transition: padding .8s ease, background-color .8s ease, box-shadow .8s ease;
-  
-}
 
-#bigLogo {
-  transition: max-width .8s ease, opacity .8s ease;
-  transform-origin: left center;  /* ayuda a que el scale se sienta natural al compactar */
-
-}
-
-
-.nav-intro,
-#navLinks {
-  transition: opacity .8s ease, transform .8s ease;
-}
-
-/* Estado expanded (solo valores) */
-#mainNav.expanded {
-  padding-left: 7em;
-  padding-right: 7em;
-  background: none;
-  box-shadow: none;
-
+#navFloating {
+  position: fixed;      /* flota sobre todo */
+  top: 0;
+  left: 0;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: stretch ;
-}
-
-#mainNav.expanded #bigLogo {
-  max-width: 100vw;
-  /* transform: scale(1); */
-  opacity: 1;
-}
-
-#mainNav.expanded .logo {
-  width: 100%;
-}
-
-#mainNav.expanded .nav-intro {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#mainNav.expanded #navLinks {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10em);
-  
-}
-
-/* Estado compact (solo valores) */
-#mainNav.compact {
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  align-items:flex-start;
-  padding-top: 0.5rem;
   justify-content: space-between;
-  padding: 3em;
+  align-items: center;
+  padding: 1rem 3rem;
+  pointer-events: auto; /* links siguen siendo clicables */
+  z-index: 900;
+  
 }
 
-#mainNav.compact #bigLogo {
-  /* transform: scale(1) translateX(0%); */
-  opacity: 1;
-  max-width: 22vw;
+#bigLogo, #navFloating a {
+  mix-blend-mode: difference; /* efecto sobre todo el DOM */
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  /* por si el navegador necesita color inicial */
 }
 
-#mainNav.compact .nav-intro {
-  opacity: 0;
-  transform: translateY(-20px);
-}
-
-#mainNav.compact #navLinks {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0em);  
-}
