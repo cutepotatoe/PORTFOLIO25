@@ -322,7 +322,6 @@ main nav {
 #bigLogo {
   transition: max-width .8s ease, opacity .8s ease;
   transform-origin: left center;  /* ayuda a que el scale se sienta natural al compactar */
-
 }
 
 
@@ -391,4 +390,32 @@ main nav {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0em);  
+}
+
+
+/* BLENDING MODE */
+#bigLogo {
+  mix-blend-mode: difference;
+}
+
+#navLinks a {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #222;
+  mix-blend-mode: difference;
+  /* Ensure the text is visible with blend mode */
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure proper stacking context for blend modes */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+#bigLogo svg,
+#bigLogo img {
+  mix-blend-mode: inherit;
 }
