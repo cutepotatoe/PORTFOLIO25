@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;    
+}
+
+html {
+  background-color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Loading types */
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("../fonts/PPNeueMontreal-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PPEiko";
+  src: url("../fonts/PPEiko-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+.fragment-mono-regular {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fragment-mono-regular-italic {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pp-neue-montreal-bold{ 
+    font-family: 'PP Neue Montreal';
+    font-weight: bold;
+    font-style: normal;
+}
+
+.pp-eiko-italic-light{ 
+    font-family: 'PP Eiko';
+    font-weight: 300;
+    font-style: italic;
+}
+
+.pp-eiko-black-italic{
+    font-family: 'PP Eiko';
+    font-weight: 900;
+    font-style: italic;
+}
+
+.pp-eiko-medium{ 
+    font-family: 'PP Eiko';
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* text styles */
+
+p {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+h2{
+  font-family: 'PP Eiko';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+
+.pink-highlight {
+  color: #EB7EAA;
+}
+
+
+/* Ocultar la barra de scroll */
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* CONTACT */
+/* NAV BAR */
+
+#navlinksb a {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #bdb9b9;
+  position: relative;
+}
+
+
+/* WORKING */
+
+#test-nav {
+    background: none;
+    mix-blend-mode: difference;
+}
+
+.test-img{
+    mix-blend-mode: difference;
+}

@@ -4,6 +4,10 @@
     
 }
 
+html {
+  background-color: white;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -199,7 +203,7 @@ body {
 
 #maincont {
   padding: 2rem;
-  background: #ffffff;
+  /* background: #ffffff; */
 }
 
 /* Ocultar la barra de scroll */
@@ -272,18 +276,16 @@ body::-webkit-scrollbar {
 main nav {
   position: sticky;
   top:80px;
-  /* border:5px solid #1B75CE; */
   display:inline-block;
   background: transparent;
-  z-index: 10;
   
 }
 
-.page-content {
+/* .page-content {
   transform: translateY(100%);
   opacity: 0;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-}
+} */
 
 .page-content.visible {
   transform: translateY(0);
@@ -292,12 +294,7 @@ main nav {
 
 /* OPCIONES NAVEGADOR */
 
-#navLinks a {
-  font-family: "Fragment Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  color: #222;
-}
+
 
 .prespace{
   padding-top: 10vh;
@@ -314,14 +311,18 @@ main nav {
 }
 
 /* Transiciones SIEMPRE activas */
+main{
+  background-color: #ffffff;
+}
+
 #mainNav {
   transition: padding .8s ease, background-color .8s ease, box-shadow .8s ease;
-  
+  mix-blend-mode: difference;
 }
 
 #bigLogo {
   transition: max-width .8s ease, opacity .8s ease;
-  transform-origin: left center;  /* ayuda a que el scale se sienta natural al compactar */
+  transform-origin: left center; 
 }
 
 
@@ -330,7 +331,7 @@ main nav {
   transition: opacity .8s ease, transform .8s ease;
 }
 
-/* Estado expanded (solo valores) */
+/* Estado expanded */
 #mainNav.expanded {
   padding-left: 7em;
   padding-right: 7em;
@@ -344,7 +345,6 @@ main nav {
 
 #mainNav.expanded #bigLogo {
   max-width: 100vw;
-  /* transform: scale(1); */
   opacity: 1;
 }
 
@@ -364,7 +364,7 @@ main nav {
   
 }
 
-/* Estado compact (solo valores) */
+/* Estado compact */
 #mainNav.compact {
   margin: 0;
   display: flex;
@@ -376,7 +376,6 @@ main nav {
 }
 
 #mainNav.compact #bigLogo {
-  /* transform: scale(1) translateX(0%); */
   opacity: 1;
   max-width: 22vw;
 }
@@ -394,28 +393,73 @@ main nav {
 
 
 /* BLENDING MODE */
-#bigLogo {
-  mix-blend-mode: difference;
-}
 
 #navLinks a {
   font-family: "Fragment Mono", monospace;
   font-weight: 400;
   font-style: normal;
-  color: #222;
-  mix-blend-mode: difference;
-  /* Ensure the text is visible with blend mode */
+  color: #ffffff;
+  mix-blend-mode: difference !important;
   position: relative;
-  z-index: 10;
 }
 
-/* Ensure proper stacking context for blend modes */
 main {
   position: relative;
   z-index: 1;
+  will-change: opacity;
+  transform: translateZ(0);
 }
 
 #bigLogo svg,
 #bigLogo img {
   mix-blend-mode: inherit;
 }
+
+/* BALANCED BLEND MODE SOLUTION */
+main nav {
+  /* position: sticky; */
+  top: 80px;
+  display: inline-block;
+  background: none;
+  z-index: 2; /* Low but sufficient to stay above content */
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+/* Apply blend mode to individual elements, not containers */
+#bigLogo {
+  mix-blend-mode: difference !important;
+  position: relative;
+  /* No z-index here - inherit from parent */
+}
+
+
+/* Ensure main content doesn't compete with nav z-index */
+main {
+  position: relative;
+  z-index: 1; /* Lower than nav */
+}
+
+/* Ensure blend elements inherit properly */
+#bigLogo svg,
+#bigLogo svg *,
+#bigLogo img {
+  mix-blend-mode: inherit;
+}
+
+/* Fix for elements that might interfere */
+.page-content {
+  position: relative;
+  z-index: 1; /* Keep below nav */
+}
+
+/* Make sure specific sections don't override nav */
+#maincont,
+.content,
+section {
+  position: relative;
+  z-index: 1; /* Keep below nav */
+}
+
+
+
