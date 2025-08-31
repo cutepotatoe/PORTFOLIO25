@@ -489,7 +489,14 @@ section {
   background-color: #222;
 }
 
-#scroll-menu{
+.scroll-menu{
   overflow: auto;
   white-space: nowrap;
+  /* para ocultar la scrollbar horizontal */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+}
+
+#card-1 {
+  margin-left: 50vw;
 }

@@ -94,3 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(sentinel);
 });
+
+
+// SCRIPT PARA MENÚ DE SCROLL HORIZONTAL
+
+const scroller = document.getElementById('scroll-menu');
+
+scroller.addEventListener('wheel', (evt) => {
+  // Si el mouse está sobre el div, el scroll vertical se convierte en horizontal
+  evt.preventDefault();
+  scroller.scrollLeft += evt.deltaY; 
+});
