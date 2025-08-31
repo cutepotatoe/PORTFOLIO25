@@ -15,13 +15,27 @@ img {
 }
 
 /* Loading types */
-@font-face {
+/* @font-face {
   font-family: "PPNeueMontreal";
   src: url("../fonts/PPNeueMontreal-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+} */
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+} 
 
 @font-face {
   font-family: "PPEiko";
@@ -75,6 +89,13 @@ p {
   font-style: normal;
   font-size: 1rem;
 }
+
+h1{
+  font-family: 'PP Neue Montreal';
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 h2{
   font-family: 'PP Eiko';
@@ -203,7 +224,6 @@ body {
 
 #maincont {
   padding: 2rem;
-  /* background: #ffffff; */
 }
 
 /* Ocultar la barra de scroll */
@@ -281,23 +301,13 @@ main nav {
   
 }
 
-/* .page-content {
-  transform: translateY(100%);
-  opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-} */
-
-.page-content.visible {
-  transform: translateY(0);
-  opacity: 1;
-}
 
 /* OPCIONES NAVEGADOR */
 
 
 
 .prespace{
-  padding-top: 10vh;
+  padding-top: 28vh;
   padding-left: 7em;
 
 }
@@ -312,7 +322,7 @@ main nav {
 
 /* Transiciones SIEMPRE activas */
 main{
-  background-color: #ffffff;
+  background-color: #f3f3f3;
 }
 
 #mainNav {
@@ -398,7 +408,7 @@ main{
   font-family: "Fragment Mono", monospace;
   font-weight: 400;
   font-style: normal;
-  color: #ffffff;
+  color: #f3f3f3;
   mix-blend-mode: difference !important;
   position: relative;
 }
@@ -433,13 +443,6 @@ main nav {
   /* No z-index here - inherit from parent */
 }
 
-
-/* Ensure main content doesn't compete with nav z-index */
-main {
-  position: relative;
-  z-index: 1; /* Lower than nav */
-}
-
 /* Ensure blend elements inherit properly */
 #bigLogo svg,
 #bigLogo svg *,
@@ -463,3 +466,30 @@ section {
 
 
 
+/* MAIN CONTENT */
+/* sincerity */
+#sincerity-star{
+  width: 2rem;
+  transition: rotate 0.4s ease-in-out;
+}
+
+#sincerity-container:hover #sincerity-star{
+  animation: rotate 4s linear infinite;
+  transition: rotate 0.4s ease-in-out;
+}
+
+#sincerity-container {
+  font-size: 3.5rem;
+}
+
+
+/* WORK SECTION */
+
+#section-work {
+  background-color: #222;
+}
+
+#scroll-menu{
+  overflow: auto;
+  white-space: nowrap;
+}
