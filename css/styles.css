@@ -551,7 +551,11 @@ section {
 
 #bgcall2actionwork{
   position: absolute;
+  right: 0;
   z-index: 1;
+  padding: 0;
+  width: 100vw;
+  
 }
 
 #scrollcall2action{
@@ -593,7 +597,6 @@ section {
   background: #f3f3f3;   
   color: #222;
   height: fit-content;       
-  display: inline-block;
   align-items: center;
 }
 
@@ -620,7 +623,7 @@ section {
     transform: translateX(0); 
   }
   to {
-    transform: translateX(-25.1%); 
+    transform: translateX(-25.01%); 
   }
 }
 
@@ -635,5 +638,5 @@ section {
 
 #snaps-section{
   min-height: 100vh;
-  background-color: #D1D485 ;
+  background-color: #D1D485;
 }
