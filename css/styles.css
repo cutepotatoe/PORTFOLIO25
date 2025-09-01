@@ -582,3 +582,38 @@ section {
   border-radius: 0.6em !important;
 }
 
+
+
+/* MARQUEE CONTENIDOS */
+
+.marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;    /* oculta lo que se sale */
+  background: #f3f3f3;    /* fondo opcional */
+  color: #222;
+  height: 80px;        /* altura del carril */
+  display: flex;
+  align-items: center;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 2rem;                /* espacio entre items */
+  animation: scroll 30s linear infinite;
+}
+
+.marquee-content span,
+.marquee-content img {
+  font-size: 2rem;
+  white-space: nowrap; /* evita saltos de línea */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%); /* empieza fuera a la derecha */
+  }
+  to {
+    transform: translateX(-100%); /* termina fuera a la izquierda */
+  }
+}
