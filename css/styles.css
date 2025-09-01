@@ -588,32 +588,52 @@ section {
 
 .marquee {
   position: relative;
-  width: 100%;
-  overflow: hidden;    /* oculta lo que se sale */
-  background: #f3f3f3;    /* fondo opcional */
+  width: 100vw;
+  overflow: hidden;    
+  background: #f3f3f3;   
   color: #222;
-  height: 80px;        /* altura del carril */
-  display: flex;
+  height: fit-content;       
+  display: inline-block;
   align-items: center;
 }
 
 .marquee-content {
+  overflow: clip;
+  white-space: nowrap;
+}
+
+.marquee-tracker {
   display: flex;
-  gap: 2rem;                /* espacio entre items */
-  animation: scroll 30s linear infinite;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll 20s linear infinite;
 }
 
 .marquee-content span,
 .marquee-content img {
   font-size: 2rem;
-  white-space: nowrap; /* evita saltos de línea */
+  white-space: nowrap; 
 }
 
 @keyframes scroll {
   from {
-    transform: translateX(100%); /* empieza fuera a la derecha */
+    transform: translateX(0); 
   }
   to {
-    transform: translateX(-100%); /* termina fuera a la izquierda */
+    transform: translateX(-25.1%); 
   }
+}
+
+.paddingmarquee{
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+}
+
+/* SNAPS SECTION */
+
+#snaps-section{
+  min-height: 100vh;
+  background-color: #D1D485 ;
 }
