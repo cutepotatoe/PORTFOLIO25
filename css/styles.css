@@ -15,13 +15,13 @@ img {
 }
 
 /* Loading types */
-/* @font-face {
+@font-face {
   font-family: "PPNeueMontreal";
   src: url("../fonts/PPNeueMontreal-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
-} */
+}
 
 @font-face {
   font-family: 'PP Neue Montreal';
@@ -38,9 +38,25 @@ img {
 } 
 
 @font-face {
-  font-family: "PPEiko";
+  font-family: "PP Eiko";
+  src: url("../fonts/PPEiko-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Eiko";
   src: url("../fonts/PPEiko-LightItalic.woff2") format("woff2");
   font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Eiko";
+  src: url("../fonts/PPEiko-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
@@ -58,27 +74,27 @@ img {
 }
 
 .pp-neue-montreal-bold{ 
-    font-family: 'PP Neue Montreal';
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'PP Neue Montreal';
+  font-weight: bold;
+  font-style: normal;
 }
 
 .pp-eiko-italic-light{ 
-    font-family: 'PP Eiko';
-    font-weight: 300;
-    font-style: italic;
+  font-family: 'PP Eiko';
+  font-weight: 300;
+  font-style: italic;
 }
 
 .pp-eiko-black-italic{
-    font-family: 'PP Eiko';
-    font-weight: 900;
-    font-style: italic;
+  font-family: 'PP Eiko';
+  font-weight: 900;
+  font-style: italic;
 }
 
 .pp-eiko-medium{ 
-    font-family: 'PP Eiko';
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'PP Eiko';
+  font-weight: 500;
+  font-style: normal;
 }
 
 /* text styles */
@@ -88,6 +104,7 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
+  line-height: 1.2;
 }
 
 h1{
@@ -102,6 +119,21 @@ h2{
   font-weight: 500;
   font-style: normal;
   font-size: 3rem;
+}
+
+h4 {
+  font-family: 'PP Eiko' !important;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.1rem !important;
+}
+
+
+.btn {
+  font-family: "Fragment Mono", monospace !important; 
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem !important;
 }
 
 
@@ -487,6 +519,12 @@ section {
 
 #section-work {
   background-color: #222;
+  min-height: 110vh;
+  padding-top: 5rem;
+}
+
+#section-work h1{
+  font-size: 4rem;
 }
 
 .scroll-menu{
@@ -495,8 +533,52 @@ section {
   /* para ocultar la scrollbar horizontal */
   -ms-overflow-style: none;  
   scrollbar-width: none;
+  height: 50vh;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  
 }
 
-#card-1 {
-  margin-left: 50vw;
+#scroll-space {
+  margin-left: 100vw;
 }
+
+
+#seemoreworkbtn{
+  padding-top: 10rem;
+}
+
+#bgcall2actionwork{
+  position: absolute;
+  z-index: 1;
+}
+
+#scrollcall2action{
+  padding-top: 16em;
+}
+
+#starscrollwork img{
+  width: 1.5em;
+  animation: rotate 8s linear infinite;
+}
+
+#starscrollwork{
+  padding-top: 1.5em;
+    
+}
+
+.card{
+  background-color: #D9D9D9 !important;
+}
+
+.text-overflow{
+  word-wrap: break-word; /* permite cortar palabras largas */
+  overflow-wrap: break-word; /* estándar moderno */
+  white-space: normal; 
+}
+
+.bordrdimgworkcarrousel{
+  border-radius: 0.6em !important;
+}
+
