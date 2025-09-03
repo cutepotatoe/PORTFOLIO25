@@ -23,9 +23,39 @@ img {
 }
 
 @font-face {
-  font-family: "PPEiko";
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+} 
+
+@font-face {
+  font-family: "PP Eiko";
+  src: url("../fonts/PPEiko-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Eiko";
   src: url("../fonts/PPEiko-LightItalic.woff2") format("woff2");
   font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Eiko";
+  src: url("../fonts/PPEiko-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
@@ -43,27 +73,27 @@ img {
 }
 
 .pp-neue-montreal-bold{ 
-    font-family: 'PP Neue Montreal';
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'PP Neue Montreal';
+  font-weight: bold;
+  font-style: normal;
 }
 
 .pp-eiko-italic-light{ 
-    font-family: 'PP Eiko';
-    font-weight: 300;
-    font-style: italic;
+  font-family: 'PP Eiko';
+  font-weight: 300;
+  font-style: italic;
 }
 
 .pp-eiko-black-italic{
-    font-family: 'PP Eiko';
-    font-weight: 900;
-    font-style: italic;
+  font-family: 'PP Eiko';
+  font-weight: 900;
+  font-style: italic;
 }
 
 .pp-eiko-medium{ 
-    font-family: 'PP Eiko';
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'PP Eiko';
+  font-weight: 500;
+  font-style: normal;
 }
 
 /* text styles */
@@ -73,7 +103,15 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
+  line-height: 1.2;
 }
+
+h1{
+  font-family: 'PP Neue Montreal';
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 h2{
   font-family: 'PP Eiko';
@@ -82,9 +120,37 @@ h2{
   font-size: 3rem;
 }
 
+h4 {
+  font-family: 'PP Eiko' !important;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.1rem !important;
+}
+
+
+.btn {
+  font-family: "Fragment Mono", monospace !important; 
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem !important;
+}
+
+.text-overflow{
+  word-wrap: break-word; /* permite cortar palabras largas */
+  overflow-wrap: break-word; /* estándar moderno */
+  white-space: normal; 
+}
 
 .pink-highlight {
   color: #EB7EAA;
+}
+
+.purple-highlight {
+  color: #868EBE;
+}
+
+.green-highlight {
+  color: #D1D485;
 }
 
 
@@ -95,25 +161,117 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* CONTACT */
 /* NAV BAR */
 
-#navlinksb a {
+main{
+  background-color: #f3f3f3;
+}
+
+#mainNav {
+  transition: padding .8s ease, background-color .8s ease, box-shadow .8s ease;
+  mix-blend-mode: difference;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  padding-top: 0.5rem;
+  justify-content: space-between;
+  padding: 3em;
+  position: fixed;
+}
+
+#bigLogo {
+  transition: max-width .8s ease, opacity .8s ease;
+  transform-origin: left center; 
+}
+
+
+#bigLogo {
+  opacity: 1;
+  max-width: 22vw;
+}
+
+#navLinks a {
   font-family: "Fragment Mono", monospace;
   font-weight: 400;
   font-style: normal;
-  color: #bdb9b9;
+  color: #f3f3f3;
+  mix-blend-mode: difference !important;
   position: relative;
 }
 
+/* FOOTER */
 
-/* WORKING */
-
-#test-nav {
-    background: none;
-    mix-blend-mode: difference;
+footer {
+  height: 60vh;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.test-img{
-    mix-blend-mode: difference;
+/* CONTACT */
+#contact-star{
+  width: 0.6em;
+  margin-left: 0.1em;
+}
+
+#links-section {
+  min-height: 100vh;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* circulo de designer */
+.graphic-container {
+  position: relative;
+  display: inline-block;
+}
+
+.graphic-hover {
+  position: relative;
+  z-index: 2;
+}
+
+.graphic-underline {
+  position: absolute;
+  bottom: -20px; /* Ajusta este valor visualmente */
+  right:0;
+  margin-right: -0.5em;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.graphic-underline-pink {
+  position: absolute;
+  bottom: -30px; /* Ajusta este valor visualmente */
+  right:0;
+  margin-right: -0.8em;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.graphic-hover:hover ~ .graphic-underline {
+  animation: drawUnderline 1.2s ease-out forwards;
+}
+
+.graphic-hover:hover ~ .graphic-underline-pink {
+  animation: drawUnderline 1.2s ease-out forwards;
+}
+
+@keyframes drawUnderline {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
