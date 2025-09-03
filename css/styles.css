@@ -136,11 +136,23 @@ h4 {
   font-size: 0.9rem !important;
 }
 
+.text-overflow{
+  word-wrap: break-word; /* permite cortar palabras largas */
+  overflow-wrap: break-word; /* estándar moderno */
+  white-space: normal; 
+}
 
 .pink-highlight {
   color: #EB7EAA;
 }
 
+.purple-highlight {
+  color: #868EBE;
+}
+
+.green-highlight {
+  color: #D1D485;
+}
 
 /* INTRO PAGE */
 body {
@@ -576,12 +588,6 @@ section {
   background-color: #D9D9D9 !important;
 }
 
-.text-overflow{
-  word-wrap: break-word; /* permite cortar palabras largas */
-  overflow-wrap: break-word; /* estándar moderno */
-  white-space: normal; 
-}
-
 .bordrdimgworkcarrousel{
   border-radius: 0.6em !important;
 }
@@ -644,7 +650,7 @@ section {
 .trail-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* o el alto que necesites */
+  height: 100vh; 
   overflow: hidden;
 }
 
@@ -657,4 +663,75 @@ section {
   transform-origin: center;
   pointer-events: none;
   will-change: transform;
+}
+#snaps-overlay{
+  position: absolute;
+  z-index: 1;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* INDEX ABOUT INTRO */
+
+#index-about{
+  min-height: 100vh;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-about-prop {
+  margin-left: 12rem;
+}
+
+/* CONTACT ME CALL2ACTION */
+
+#make-it-happen{
+  min-height: 100vh;
+  background-color: #222;
+  padding-top: 4em !important;
+}
+
+#exclamation-star{
+  width: 1.4rem;
+  margin-left: 0.1em;
+  margin-bottom: 0.1em;
+}
+#contactme-container {
+  height: 80vh;
+  display: flex;
+  align-content: center;
+}
+
+/* parallax efect */
+.parallax-container {
+  position: relative;
+  width: 750px;
+  height: 50vh; /* ajusta a tu layout */
+  overflow: visible;
+  pointer-events: none;
+}
+
+.parallax-item {
+  position: absolute;
+  width: 200px; /* ajusta según tus SVG */
+  height: auto;
+  will-change: transform;
+}
+
+
+/* FOOTER */
+
+footer {
+  height: 60vh;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

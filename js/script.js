@@ -298,3 +298,37 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   animate();
 });
+
+
+// EFECTO PPARALLAS ILUSTRACIONES CONTACT
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".parallax-item");
+
+  let targetX = 0, targetY = 0;   // posición deseada (según ratón)
+  let currentX = 0, currentY = 0; // posición suavizada
+  const easing = 0.02; // cuanto más bajo, más suave/inercial
+
+  document.addEventListener("mousemove", (e) => {
+    const { innerWidth, innerHeight } = window;
+    targetX = (e.clientX / innerWidth - 0.5) * 2; // -1 a 1
+    targetY = (e.clientY / innerHeight - 0.5) * 2;
+  });
+
+  function animate() {
+    // Interpolación suave (lerp)
+    currentX += (targetX - currentX) * easing;
+    currentY += (targetY - currentY) * easing;
+
+    items.forEach((item) => {
+      const depth = item.dataset.depth;
+      const moveX = currentX * depth;
+      const moveY = currentY * depth;
+      item.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+});
