@@ -281,3 +281,8 @@ footer {
 #contact-container {
   color: #f3f3f3;
 }
+
+#about-me-body{
+  background-color: #f3f3f3;
+  min-height: 100vh;
+}
