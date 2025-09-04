@@ -286,3 +286,42 @@ footer {
   background-color: #f3f3f3;
   min-height: 100vh;
 }
+
+#text-self-intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#self-introduction{
+  padding-top: 8em !important;
+  padding-bottom: 8em !important;
+
+}
+
+#cv-info {
+  padding-top: 8em !important;
+  padding-bottom: 8em !important;
+}
+
+#education:hover div h5 svg path {
+  fill: #EB7EAA; 
+}
+
+#languages:hover h5 svg path {
+  fill: #EB7EAA;
+}
+
+#skills:hover div h5 svg path {
+  fill: #868EBE; 
+}
+
+#professional-experience:hover div h5 svg path {
+  fill: #D1D485; 
+}
+
+
+/* WORK PAGE */
+#work-container {
+  color: #f3f3f3;
+}
