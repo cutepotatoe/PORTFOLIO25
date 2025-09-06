@@ -325,3 +325,52 @@ footer {
 #work-container {
   color: #f3f3f3;
 }
+
+#video-section-title{
+ 
+  background-color: #222;
+}
+
+/* flecha arrow toggle */
+.arrow-toggle {
+  transition: transform 0.3s ease;
+}
+
+a[aria-expanded="true"] .arrow-toggle {
+  transform: rotate(180deg);
+}
+
+#collapseExample {
+  /* gradiente */
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(
+    to bottom,
+    #222 0%,     /* empieza aquí */
+    #f3f3f3 1000px,    /* color sólido hasta el 40% */
+    #f3f3f3 100%    /* sólido hasta el final */
+  );
+  
+}
+
+.work-box {
+  width: 90vw;
+  height: fit-content;
+  background-color: #f3f3f3;
+  border-radius: 1em;
+  margin-top: 10em !important;
+
+  /* efectoo drop down shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* propiedad de bootstrap made !important to avoid d-flex override */
+.collapse {
+  &:not(.show) {
+    display: none !important;
+  }
+}
+
+.border-img-cards{
+  border-radius: 0.8em !important;
+}
