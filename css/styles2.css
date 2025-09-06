@@ -340,7 +340,7 @@ a[aria-expanded="true"] .arrow-toggle {
   transform: rotate(180deg);
 }
 
-#collapseExample {
+#collapseVideo {
   /* gradiente */
   width: 100%;
   height: fit-content;
