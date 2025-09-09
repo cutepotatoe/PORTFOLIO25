@@ -380,6 +380,7 @@ a[aria-expanded="true"] .arrow-toggle {
   max-width: fit-content !important;
   display: flex;
   align-self: center;
+  background-color: #f3f3f3;
  
 }
 
