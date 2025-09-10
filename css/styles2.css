@@ -326,8 +326,7 @@ footer {
   color: #f3f3f3;
 }
 
-#video-section-title{
- 
+#video-section-title{ 
   background-color: #222;
 }
 
@@ -384,3 +383,19 @@ a[aria-expanded="true"] .arrow-toggle {
  
 }
 
+#projects-3D-section-title { 
+  background-color: #868EBE;
+}
+
+#collapse3DProjects {
+  /* gradiente */
+  width: 100%;
+  height: 200vh;
+  background: linear-gradient(
+    to bottom,
+    #868EBE 0%,     /* empieza aquí */
+    #222 600px,    /* color sólido hasta el 40% */
+    #222 100%    /* sólido hasta el final */
+  );
+  padding-bottom: 8em !important;
+}
