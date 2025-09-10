@@ -350,7 +350,7 @@ a[aria-expanded="true"] .arrow-toggle {
     #f3f3f3 1000px,    /* color sólido hasta el 40% */
     #f3f3f3 100%    /* sólido hasta el final */
   );
-  
+  padding-bottom: 8em !important;
 }
 
 .work-box {
