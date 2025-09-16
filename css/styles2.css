@@ -390,7 +390,7 @@ a[aria-expanded="true"] .arrow-toggle {
 #collapse3DProjects {
   /* gradiente */
   width: 100%;
-  height: 200vh;
+  height: fit-content;
   background: linear-gradient(
     to bottom,
     #868EBE 0%,     /* empieza aquí */
