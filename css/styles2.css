@@ -407,7 +407,7 @@ a[aria-expanded="true"] .arrow-toggle {
 #collapseEditorial {
   /* gradiente */
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   background: linear-gradient(
     to bottom,
     #EB7EAA 0%,     /* empieza aquí */
@@ -455,6 +455,19 @@ a[aria-expanded="true"] .arrow-toggle {
 }
 
 
+#photography-section-title {
+  background-color: #D1D485;
+}
 
-
-
+#collapsePhotography{
+  /* gradiente */
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(
+    to bottom,
+    #D1D485 0%,     /* empieza aquí */
+    #222 600px,    /* color sólido hasta el 40% */
+    #222 100%    /* sólido hasta el final */
+  );
+  padding-bottom: 8em !important;
+}
