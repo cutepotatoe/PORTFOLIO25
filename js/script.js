@@ -62,38 +62,6 @@ window.addEventListener('DOMContentLoaded', () => {
 // INDEX
 
 // SCRIPT PARA ENTRADA INDEX
-window.addEventListener('DOMContentLoaded', () => {
-  const main = document.getElementById('mainContent');
-  setTimeout(() => {
-    main.classList.add('visible');
-  }, 2); // pequeño delay para asegurar render previo a transición
-});
-
-// OPCIONES NAVEGADOR
-document.addEventListener("DOMContentLoaded", () => {
-  const nav = document.getElementById("mainNav");
-  const sentinel = document.getElementById("navSentinel");
-  if (!nav || !sentinel) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          // 👇 solo cuando el sentinel "sube" detrás del nav sticky
-          nav.classList.remove("expanded");
-          nav.classList.add("compact");
-        } else {
-          // 👇 cuando volvemos hacia arriba
-          nav.classList.remove("compact");
-          nav.classList.add("expanded");
-        }
-      });
-    },
-    { threshold: 0 }
-  );
-
-  observer.observe(sentinel);
-});
 
 
 // SCRIPT PARA MENÚ DE SCROLL HORIZONTAL
