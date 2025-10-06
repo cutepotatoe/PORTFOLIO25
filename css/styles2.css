@@ -471,3 +471,20 @@ a[aria-expanded="true"] .arrow-toggle {
   );
   padding-bottom: 8em !important;
 }
+
+#advertisement-section-title {
+  background-color: #222;
+}
+
+#collapseAdvertisement{
+  /* gradiente */
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(
+    to bottom,
+    #222 0%,     /* empieza aquí */
+    #f3f3f3 1000px,    /* color sólido hasta el 40% */
+    #f3f3f3 100%    /* sólido hasta el final */
+  );
+  padding-bottom: 8em !important;
+}
