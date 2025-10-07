@@ -488,3 +488,37 @@ a[aria-expanded="true"] .arrow-toggle {
   );
   padding-bottom: 8em !important;
 }
+
+#web-section-title {
+  background-color: #868EBE;
+}
+
+#collapseWEB {
+  /* gradiente */
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(
+    to bottom,
+    #868EBE 0%,     /* empieza aquí */
+    #222 600px,    /* color sólido hasta el 40% */
+    #222 100%    /* sólido hasta el final */
+  );
+  padding-bottom: 8em !important;
+}
+
+#illustration-section-title { 
+  background-color: #EB7EAA;
+}
+
+#collapseIllustration {
+  /* gradiente */
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(
+    to bottom,
+    #EB7EAA 0%,     /* empieza aquí */
+    #222 600px,    /* color sólido hasta el 40% */
+    #222 100%    /* sólido hasta el final */
+  );
+  padding-bottom: 8em !important;
+}
