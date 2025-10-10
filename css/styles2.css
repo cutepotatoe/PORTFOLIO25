@@ -522,3 +522,30 @@ a[aria-expanded="true"] .arrow-toggle {
   );
   padding-bottom: 8em !important;
 }
+
+/* animations for stars on landing pages  */
+.spin-star {
+  animation: rotate 8s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#contact-star {
+  margin-left: 1.2rem;
+}
+
+#work-container:hover .spin-star {
+  animation-play-state:paused  ;
+}
+#contact-container:hover .spin-star {
+  animation-play-state:paused  ;
+}

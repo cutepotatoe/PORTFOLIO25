@@ -517,9 +517,8 @@ section {
   transition: rotate 0.4s ease-in-out;
 }
 
-#sincerity-container:hover #sincerity-star{
-  animation: rotate 4s linear infinite;
-  transition: rotate 0.4s ease-in-out;
+#sincerity-container:hover .spin-star{
+  animation-play-state:paused  ;
 }
 
 #sincerity-container {
