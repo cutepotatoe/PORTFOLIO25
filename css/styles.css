@@ -734,3 +734,15 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 }
+
+
+/* modales work prev */
+
+.modal-dialog {
+  width: 80vw !important;
+  max-width: fit-content !important;
+  display: flex;
+  align-self: center;
+  background-color: #f3f3f3;
+ 
+}
