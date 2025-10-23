@@ -200,6 +200,10 @@ main{
   position: relative;
 }
 
+#bigLogo_mobile {
+  display: none;
+}
+
 /* FOOTER */
 
 footer {
@@ -548,4 +552,213 @@ a[aria-expanded="true"] .arrow-toggle {
 }
 #contact-container:hover .spin-star {
   animation-play-state:paused  ;
+}
+
+
+/* MEDIA QUERIES :) */
+
+/* ipad intemediate */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  #mainNav.compact #bigLogo {
+    opacity: 1;
+    max-width: 33vw;
+  }
+
+  
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem !important;
+  }
+
+  .prespace{
+    padding-top: 28vh;
+    padding-left: 2em;
+  }
+
+  /* LANDIND PAGE */
+  .nav-intro {
+    max-width: 98vw;
+  }
+
+  #mainNav.expanded {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  #gdesigner{
+    padding-left: 2em !important;
+    padding-right: 0em ;
+    margin-right: 0em !important;
+  }
+  .graphic-underline {
+    bottom: -30px; /* Ajusta este valor visualmente */
+    right:0;
+    margin-right: -0.6em;
+    width: 230px !important;
+  }
+  
+  /* NAVEGADOR */
+
+  #bigLogo {
+    display: none;
+  }
+
+  #bigLogo_mobile {
+    display: block;
+    padding-right: 1rem;
+    width: 18vw;
+  }
+
+  #mainNav {
+    padding: 1.6rem !important;
+  }
+
+  #navLinks {
+    gap: 1.7rem !important
+  }
+
+  #navLinks a {
+    font-size: 1rem;
+  }
+
+  /* SINCERITY */
+  #sincerity-container {
+    font-size: 3rem;
+    white-space: none;
+  }
+
+  /* WORK */
+  #section-work h1{
+    padding-bottom: 0vh !important; 
+  }
+
+  #scrollcall2action{
+    padding-top: 15em;
+  }
+
+  #seemoreworkbtn{
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+
+  .scroll-menu{
+    height: 65vh;
+  }
+
+  .card {
+    
+    width: 20rem !important;
+  }
+
+  /* MODALES */
+
+  .modal-content {
+    width: 95vw !important;
+  }
+
+  .modal-dialog {
+    width: 95vw !important;
+  }
+
+  
+  .modal-body h2 {
+    font-size: 3rem !important;
+  }
+  
+  .modal-body p {
+    font-size: 0.92rem;
+  }
+  
+  .big_p_mobile {
+    font-size: 1.1rem !important;
+  }
+  /* para cambiar la foto arriba en mobile */
+  .row-alternate {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  #modal-star {
+    height: 2.5rem !important; 
+  }
+  
+  #pop-up-vwlighter video{
+    width: max-content !important;
+    padding: 0rem;
+  }
+
+  /* ABOUT */
+  .col-about-prop {
+    margin-left: 0rem;
+    padding-left: 2rem;
+  }
+  .col-about-prop h1 {
+    font-size: 2rem !important;
+  }
+  #container-title-about {
+    width: 90vw;
+  }
+
+  /* MAKE IT HAPPEN */
+  #title-makeithappen{
+    font-size: 3rem !important;
+  }
+  #exclamation-star{
+    width: 1.4rem;
+    margin-left: 0.1em;
+    margin-bottom: 0.1em;
+  }
+
+
+  /* parallax efect */
+  .parallax-container {
+    position: relative;
+    width: 120px;
+    height: 50vh; /* ajusta a tu layout */
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  .parallax-item {
+    position: absolute;
+    width: 80px; /* ajusta según tus SVG */
+    height: auto;
+    will-change: transform;
+    
+  }
+
+  #contactme-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .special-pad-parallax {
+    padding-right: 8rem !important;
+  }
+
+  #text-makeithappen{
+    font-size: 1.6rem !important;
+  }
+  
+
+  /* FOOTER */
+  .star-footer {
+    width: 2rem !important;
+    margin-bottom: 4rem;
+  }
+
 }
