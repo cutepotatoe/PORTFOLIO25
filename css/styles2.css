@@ -4,7 +4,7 @@
 }
 
 html {
-  background-color: white;
+  background-color: #f3f3f3;
 }
 
 img {
@@ -153,6 +153,9 @@ h4 {
   color: #D1D485;
 }
 
+.title-star {
+  width: 6rem !important;
+}
 
 /* Ocultar la barra de scroll */
 
@@ -217,7 +220,7 @@ footer {
 /* CONTACT */
 #contact-star{
   width: 0.6em;
-  margin-left: 0.1em;
+  margin-left: 0em;
 }
 
 #links-section {
@@ -326,6 +329,12 @@ footer {
 
 
 /* WORK PAGE */
+
+#work-container span{
+  width: 0.6em;
+  margin-left: 0em;
+}
+
 #work-container {
   color: #f3f3f3;
 }
@@ -587,28 +596,6 @@ a[aria-expanded="true"] .arrow-toggle {
     padding-top: 28vh;
     padding-left: 2em;
   }
-
-  /* LANDIND PAGE */
-  .nav-intro {
-    max-width: 98vw;
-  }
-
-  #mainNav.expanded {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
-
-  #gdesigner{
-    padding-left: 2em !important;
-    padding-right: 0em ;
-    margin-right: 0em !important;
-  }
-  .graphic-underline {
-    bottom: -30px; /* Ajusta este valor visualmente */
-    right:0;
-    margin-right: -0.6em;
-    width: 230px !important;
-  }
   
   /* NAVEGADOR */
 
@@ -634,34 +621,51 @@ a[aria-expanded="true"] .arrow-toggle {
     font-size: 1rem;
   }
 
-  /* SINCERITY */
-  #sincerity-container {
-    font-size: 3rem;
+  /*  WORK PAGE */
+  #work-container {
+    font-size: 4rem !important;
     white-space: none;
   }
 
-  /* WORK */
-  #section-work h1{
-    padding-bottom: 0vh !important; 
+  #work-container span{
+    width: 0.6em;
+    margin-left: 0em;
   }
 
-  #scrollcall2action{
-    padding-top: 15em;
+  #contact-star{
+    margin-left: 0em;
   }
 
-  #seemoreworkbtn{
-    padding-top: 10rem;
-    padding-bottom: 5rem;
+  #menu-categorias-work a{
+    font-size: 2.1rem !important;
   }
 
-  .scroll-menu{
-    height: 65vh;
+  .work-box h2 {
+    font-size: 3rem !important;
   }
 
-  .card {
-    
-    width: 20rem !important;
+  .work-box p {
+    font-size: 0.92rem;
   }
+
+
+
+  /* ABOUT PAGE */
+
+  
+
+  /* CONTACT PAGE */
+
+  #contact-container {
+    font-size: 4rem !important;
+    white-space: none;
+  }
+
+  #contact-container span{
+    width: 0.6em;
+    margin-left: 0em;
+  }  
+
 
   /* MODALES */
 
@@ -701,58 +705,6 @@ a[aria-expanded="true"] .arrow-toggle {
     padding: 0rem;
   }
 
-  /* ABOUT */
-  .col-about-prop {
-    margin-left: 0rem;
-    padding-left: 2rem;
-  }
-  .col-about-prop h1 {
-    font-size: 2rem !important;
-  }
-  #container-title-about {
-    width: 90vw;
-  }
-
-  /* MAKE IT HAPPEN */
-  #title-makeithappen{
-    font-size: 3rem !important;
-  }
-  #exclamation-star{
-    width: 1.4rem;
-    margin-left: 0.1em;
-    margin-bottom: 0.1em;
-  }
-
-
-  /* parallax efect */
-  .parallax-container {
-    position: relative;
-    width: 120px;
-    height: 50vh; /* ajusta a tu layout */
-    overflow: visible;
-    pointer-events: none;
-  }
-
-  .parallax-item {
-    position: absolute;
-    width: 80px; /* ajusta según tus SVG */
-    height: auto;
-    will-change: transform;
-    
-  }
-
-  #contactme-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .special-pad-parallax {
-    padding-right: 8rem !important;
-  }
-
-  #text-makeithappen{
-    font-size: 1.6rem !important;
-  }
   
 
   /* FOOTER */
