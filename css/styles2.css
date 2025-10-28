@@ -574,6 +574,8 @@ a[aria-expanded="true"] .arrow-toggle {
     max-width: 33vw;
   }
 
+ 
+
   
 }
 
@@ -652,6 +654,20 @@ a[aria-expanded="true"] .arrow-toggle {
 
   /* ABOUT PAGE */
 
+  #self-introduction{
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+
+  }
+
+  #cv-info {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+  }
+
+  #title-PE {
+    letter-spacing: -0.03em;
+  }
   
 
   /* CONTACT PAGE */
@@ -664,7 +680,13 @@ a[aria-expanded="true"] .arrow-toggle {
   #contact-container span{
     width: 0.6em;
     margin-left: 0em;
-  }  
+  }
+  
+  #links-section h5{
+    font-size: 1.8rem !important;
+  }
+
+ 
 
 
   /* MODALES */
@@ -705,7 +727,17 @@ a[aria-expanded="true"] .arrow-toggle {
     padding: 0rem;
   }
 
-  
+  .flipbook-container{
+    height: auto;
+  }
+
+  #link-BASS{
+    font-size: 2.5rem !important;
+  }
+
+  #link-MOC {
+    font-size: 2.8rem !important;
+  }
 
   /* FOOTER */
   .star-footer {
