@@ -567,15 +567,83 @@ a[aria-expanded="true"] .arrow-toggle {
 /* MEDIA QUERIES :) */
 
 /* ipad intemediate */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1400px) {
 
   #mainNav.compact #bigLogo {
     opacity: 1;
     max-width: 33vw;
   }
 
+  /*  WORK PAGE */
+
+  #menu-categorias-work a{
+    font-size: 3.2rem !important;
+  }
+
+  .work-box h2 {
+    font-size: 3rem !important;
+  }
  
 
+  /* MODALES */
+
+  .modal-content {
+    width: 95vw !important;
+  }
+
+  .modal-dialog {
+    width: 90vw !important;
+  }
+
+  .modal-body h2 {
+    font-size: 3rem !important;
+  }
+
+  .big_p_mobile {
+    font-size: 1.2rem !important;
+  }
+  
+  #modal-star {
+    height: 3.2rem !important; 
+  }
+
+  .border-img-cards{
+    height: min-content;
+  }
+
+  .flipbook-container {
+    height: fit-content;
+  }
+
+  #link-BASS{
+    font-size: 2.5rem !important;
+  }
+
+  #link-MOC {
+    font-size: 2.5rem !important;
+  }
+
+  /* CONTACT */
+
+  #contact-container {
+    font-size: 8rem !important;
+    white-space: none;
+  }
+
+  #cv-info {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+  }
+
+  #links-section h5{
+    font-size: 1.8rem !important;
+  }
+
+  /* FOOTER */
+  .star-footer {
+    width: 8rem !important;
+    margin-bottom: 4rem;
+  }
   
 }
 

@@ -195,6 +195,11 @@ body {
   z-index: 0;
 }
 
+#bg-video {
+  width: 150vw !important;
+  min-height: 20vh;
+}
+
 #scroll{
   z-index: 3;
 }
@@ -757,19 +762,119 @@ footer {
   width: 80vw !important;
 }
 
+.border-img-cards{
+  height: min-content;
+}
+
 
 
 /* MEDIA QUERIES :) */
 
 /* ipad intemediate */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1400px) {
 
   #mainNav.compact #bigLogo {
     opacity: 1;
     max-width: 33vw;
   }
 
+  /* INTRO */
+  .prespace{
+    padding-top: 28vh;
+    padding-left: 4.2em;
+  }
+
+  #mainNav.expanded {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  #gdesigner{
+    padding-right: 2em ;
+  }
+
+  #text-makeithappen {
+    font-size: 1.9rem !important;
+  }
+
+  /* NAVEGADOR */
+
+  /* MODALES */
+
+  .modal-content {
+    width: 95vw !important;
+  }
+
+  .modal-dialog {
+    width: 90vw !important;
+  }
+
+  .modal-body h2 {
+    font-size: 3.5rem !important;
+  }
+
+  .big_p_mobile {
+    font-size: 1.2rem !important;
+  }
   
+  #modal-star {
+    height: 3.2rem !important; 
+  }
+
+  .border-img-cards{
+    height: min-content;
+  }
+
+  /* ABOUT */
+  .col-about-prop {
+    margin-left: 0rem;
+    padding-left: 4rem;
+  }
+  #container-title-about {
+    width: 80vw;
+  }
+
+  /* MAKE IT HAPPEN */
+  #title-makeithappen{
+    font-size: 3rem !important;
+  }
+  #exclamation-star{
+    width: 1.4rem;
+    margin-left: 0.1em;
+    margin-bottom: 0.1em;
+  }
+
+  /* parallax efect */
+  .parallax-container {
+    position: relative;
+    width: 150px;
+    height: 50vh; /* ajusta a tu layout */
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  .parallax-item {
+    position: absolute;
+    width: 200px; /* ajusta según tus SVG */
+    height: auto;
+    will-change: transform;
+    
+  }
+
+  #contactme-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .special-pad-parallax {
+    padding-right: 4rem !important;
+  }
+
+  /* FOOTER */
+  .star-footer {
+    width: 8rem !important;
+    margin-bottom: 4rem;
+  }
+
 }
 
 
