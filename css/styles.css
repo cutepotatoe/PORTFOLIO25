@@ -639,7 +639,7 @@ section {
 .marquee-content img {
   font-size: 2rem;
   white-space: nowrap;
-  height: auto !important; 
+  height: min-content !important; 
 }
 
 @keyframes scroll {
