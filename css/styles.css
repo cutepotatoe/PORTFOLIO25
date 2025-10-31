@@ -16,7 +16,6 @@ img {
 
 img {
   width: 100%;
-  height: auto !important;
   object-fit: cover;
 }
 
@@ -618,8 +617,9 @@ section {
   overflow: hidden;    
   background: #f3f3f3;   
   color: #222;
-  height: fit-content;       
+  height: fit-content !important;       
   align-items: center;
+
 }
 
 .marquee-content {
