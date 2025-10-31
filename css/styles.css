@@ -620,7 +620,6 @@ section {
   color: #222;
   height: fit-content !important;       
   align-items: center;
-
 }
 
 .marquee-content {
@@ -639,7 +638,6 @@ section {
 .marquee-content img {
   font-size: 2rem;
   white-space: nowrap;
-  height: none !important; 
 }
 
 @keyframes scroll {
