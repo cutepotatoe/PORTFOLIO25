@@ -10,7 +10,7 @@ function transitionToIndex() {
   loadingcont.classList.add('slide-up');
 
   setTimeout(() => {
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   }, 1000); // igual al CSS
 }
 
