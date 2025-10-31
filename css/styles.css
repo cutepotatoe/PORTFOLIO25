@@ -14,6 +14,12 @@ img {
   display: block;
 }
 
+img {
+  width: 100%;
+  height: auto !important;
+  object-fit: cover;
+}
+
 /* Loading types */
 @font-face {
   font-family: "PPNeueMontreal";
