@@ -10,13 +10,9 @@ html {
 
 img {
   max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
-}
-
-img {
-  width: 100%;
-  height: auto !important;
 }
 
 /* Loading types */
@@ -1004,6 +1000,10 @@ footer {
   
   .modal-body p {
     font-size: 0.92rem;
+  }
+
+  .border-img-cards{
+    height: min-content;
   }
   
   .big_p_mobile {
