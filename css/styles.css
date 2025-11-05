@@ -894,6 +894,10 @@ footer {
     font-size: 1.5rem !important;
   }
 
+  img {
+    height: auto !important;
+  }
+
   .prespace{
     padding-top: 28vh;
     padding-left: 2em;
