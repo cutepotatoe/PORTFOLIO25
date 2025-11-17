@@ -229,6 +229,10 @@ body {
   }
 }
 
+#star-landing {
+  width: 4rem;
+}
+
 /* volteo luna */
 .flip-wrapper {
   perspective: 1000px; /* Necesario para efecto 3D */
@@ -248,6 +252,10 @@ body {
   to {
     transform: rotateY(360deg);
   }
+}
+
+#moon-landing {
+  width: 4rem;
 }
 
 /* flecha animacion landing page */
@@ -789,6 +797,7 @@ footer {
     padding-left: 4em;
     padding-right: 4em;
   }
+
   #gdesigner{
     padding-right: 2em ;
   }
@@ -796,6 +805,8 @@ footer {
   #text-makeithappen {
     font-size: 1.9rem !important;
   }
+
+
 
   /* NAVEGADOR */
 
