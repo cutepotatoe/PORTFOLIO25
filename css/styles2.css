@@ -13,6 +13,10 @@ img {
   display: block;
 }
 
+.img-ios {
+  height: auto  !important;
+}
+
 /* Loading types */
 @font-face {
   font-family: "PPNeueMontreal";
